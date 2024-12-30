@@ -37,9 +37,9 @@ class VGG16Network(nn.Module):
 
     def forward(self, x):
         x = self.features(x)
-        print(f"Size after features: {x.size()}")  # Print size after features
+        # print(f"Size after features: {x.size()}")  # Print size after features
         x = torch.flatten(x, 0)
-        print(f"Size after flatten: {x.size()}")
+        # print(f"Size after flatten: {x.size()}")
         x = self.classifier(x)
         return x
         
