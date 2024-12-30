@@ -34,7 +34,6 @@ def main(cfg: DictConfig) -> None:
     )
     print(dict(total_label_counter))
 
-    input_dim = 132 * 175 * 48
     output_dim = len(cfg.data.emotion_idx)
     model = VGG16Network(output_dim=output_dim)
     model = model.to(device)
